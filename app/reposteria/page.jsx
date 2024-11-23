@@ -21,14 +21,14 @@ export default function Reposteria() {
 
   return (
     <>
-      <div className="relative overflow-scroll">
+      <div className="relative overflow-scroll text-center">
         <img src="/Tienda2500x2500.jpg" className="max-w-full md:block hidden" />
         <img src="Tienda1024x2048.jpg" className="max-w-full md:hidden block" />
         <div className="absolute text-xl text-white left-4 top-4">
           {showMenu && (
             menu.map((item, index) => (
               <div key={`${item.id}-${index}`}>
-                <p  className="md:text-6xl text-2xl md:mb-4 mb-0 md:mt-8 mt-1 underline underline-offset-8">{(item.name).substring(11, 30)}:</p>
+                <p className="md:text-6xl text-2xl md:mb-4 mb-0 md:mt-8 mt-1 underline underline-offset-8">{(item.name).substring(11, 30)}:</p>
                 <div className=" flex flex-wrap">
                   {item.menu.map((category_menu) => (
                     <div key={category_menu.id} className="bg-slate-900 bg-opacity-50 p-4 mr-4 mt-4 rounded-2xl md:w-96 w-11/12">
@@ -65,6 +65,9 @@ export default function Reposteria() {
                 </div>
               </div>
             )))}
+          <div className="bg-green-900 w-1/2 mt-4 ml-auto mr-auto md:text-2xl text-xl text-white rounded-xl p-4 hover:text-4xl hover:mt-3">
+            <a href="https://api.whatsapp.com/send?phone=543489538212&text=Hola%20UmamiVeg">Hacer un Pedido</a>
+          </div>
         </div>
       </div>
     </>

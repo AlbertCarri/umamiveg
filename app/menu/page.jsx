@@ -22,20 +22,17 @@ export default function Menu() {
 
   return (
     <>
-      <div className="relative overflow-scroll">
-        <img src="/menu2500x2500.jpg" className="max-w-full md:block hidden" />
-
-
-        <img src="/menu1024x2048.jpg" className="max-w-full md:hidden block" />
-
+      <div className="relative bg-cover md:bg-top bg-center md:h-[2000px]  h-svh overflow-scroll text-center" style={{ backgroundImage: "url('/menu2500x2500.jpg')" }}>
+        {/*<img src="/menu2500x2500.jpg" className="max-w-full md:block hidden" />
+        <img src="/menu1024x2048.jpg" className="max-w-full md:hidden block" />*/}
         <div className="absolute text-xl text-white left-4 top-4">
           {showMenu && (
             menu.map((item, index) => (
               <div key={`${item.id}-${index}`}>
-                <p  className="md:text-6xl text-2xl md:mb-4 mb-0 md:mt-8 mt-1 underline underline-offset-8">{(item.name).substring(5, 20)}:</p>
+                <p className="md:text-6xl text-2xl md:mb-4 mb-0 md:mt-8 mt-1 underline underline-offset-8">{(item.name).substring(5, 20)}:</p>
                 <div className=" flex flex-wrap">
                   {item.menu.map((category_menu) => (
-                    <div key={category_menu.id} className="bg-slate-900 bg-opacity-50 p-4 mr-4 mt-4 rounded-2xl md:w-96 w-11/12">
+                    <div key={category_menu.id} className="bg-neutral-900 bg-opacity-75 p-4 mr-4 mt-4 rounded-2xl md:w-96 w-11/12">
                       {category_menu.checked && (
                         <div>
                           <div className="flex flex-row justify-center">
@@ -69,6 +66,9 @@ export default function Menu() {
                 </div>
               </div>
             )))}
+          <div className="bg-green-900 w-1/2 mt-4 ml-auto mr-auto md:text-2xl text-xl text-white rounded-xl p-4 hover:text-4xl hover:mt-3">
+            <a href="https://api.whatsapp.com/send?phone=543489538212&text=Hola%20UmamiVeg">Hacer un Pedido</a>
+          </div>
         </div>
       </div>
     </>
