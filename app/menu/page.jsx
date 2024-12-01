@@ -1,10 +1,14 @@
 'use client'
 
 import { useState, useEffect } from "react"
+import ShowCart from "@/components/showcart.jsx"
 
 export default function Menu() {
   const [menu, setMenu] = useState([])
   const [showMenu, setShowMenu] = useState(false)
+  const [cart, setCart] = useState(false)
+  const [cartContent, setCartContent] = useState([])
+  const [showCartContent, setShowCartContent] = useState(false)
 
   useEffect(() => {
     const readMenu = async () => {
@@ -20,6 +24,22 @@ export default function Menu() {
     readMenu()
 
   }, [])
+
+  const addCart = (cartAdd) => {
+    setCart(true)
+    setCartContent((prevCartContent) => {
+      const existe = prevCartContent.find((item) => item.id === cartAdd.id)
+      if (existe) {
+        return cartContent
+      } else {
+        return [...prevCartContent, { id: cartAdd.id, name: cartAdd.name, price: cartAdd.price, amount: 1 }]
+      }
+    })
+  }
+
+  const showCartItems = () => {
+    setShowCartContent(!showCartContent)
+  }
 
   return (
     <>
@@ -37,6 +57,19 @@ export default function Menu() {
                 <img src="/pedidosya.png" className="w-4/5 origin-center transition-all hover:scale-105 shadow-xl" alt="pedidoya" />
               </a>
             </div>
+          )}
+          {cart && (
+            <>
+              <button type="button"
+                className="absolute w-16 right-10"
+                onClick={showCartItems}>
+                <img src="/cart.png" alt="Cart" className="backdrop-invert-0" />
+              </button>
+              <p className=" absolute bg-red-600 w-7 right-9 rounded-xl">{cartContent.length}</p>
+            </>
+          )}
+          {showCartContent && (
+            <ShowCart cartContent={cartContent} setCartContent={setCartContent} />
           )}
           {showMenu && (
             menu.map((item, index) => (
@@ -70,7 +103,7 @@ export default function Menu() {
                             )}
                           </div>
                           <div className="bg-green-900 w-1/2 mt-1 ml-auto mr-auto md:text-lg text-ms text-white rounded-xl p-1 hover:bg-orange-800">
-                            <a href="https://api.whatsapp.com/send?phone=543489538212&text=Hola%20UmamiVeg">Hacer un Pedido</a>
+                            <button type="button" onClick={() => addCart(category_menu)}>Agregar al pedido</button>
                           </div>
                         </div>
                       )}
