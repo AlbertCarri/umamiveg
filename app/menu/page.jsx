@@ -61,15 +61,17 @@ export default function Menu() {
           {cart && (
             <>
               <button type="button"
-                className="absolute w-16 right-10"
+                className="fixed w-16 right-10"
                 onClick={showCartItems}>
                 <img src="/cart.png" alt="Cart" className="backdrop-invert-0" />
               </button>
-              <p className=" absolute bg-red-600 w-7 right-9 rounded-xl">{cartContent.length}</p>
+              <p className=" fixed bg-red-600 w-7 right-9 rounded-xl">{cartContent.length}</p>
             </>
           )}
           {showCartContent && (
-            <ShowCart cartContent={cartContent} setCartContent={setCartContent} />
+            <div>
+            <ShowCart cartContent={cartContent} setCartContent={setCartContent} setShowCartContent={setShowCartContent} />
+            </div>
           )}
           {showMenu && (
             menu.map((item, index) => (

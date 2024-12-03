@@ -21,9 +21,7 @@ export default function Reposteria() {
 
   return (
     <>
-      <div className="relative overflow-scroll text-center">
-        <img src="/Tienda2500x2500.jpg" className="max-w-full md:block hidden" />
-        <img src="Tienda1024x2048.jpg" className="max-w-full md:hidden block" />
+      <div className="relative bg-cover md:bg-top bg-center md:h-[2000px]  h-svh overflow-scroll text-center" style={{ backgroundImage: "url('/Reposteria2500x2500.jpg')" }}>
         <div className="absolute text-xl text-white left-4 top-4">
           {showMenu && (
             menu.map((item, index) => (
@@ -58,6 +56,9 @@ export default function Reposteria() {
                             )}
                           </div>
                           <div className="w-full border-zinc-500 border-t p-2 flex justify-center"></div> {/* línea separadora*/}
+                          <div className="bg-green-900 w-1/2 mt-4 ml-auto mr-auto md:text-xl text-md text-white rounded-xl p-2 hover:bg-green-950">
+                            <a href="https://api.whatsapp.com/send?phone=543489538212&text=Hola%20UmamiVeg.%20Tengo%20una%20consulta.">Hacer consulta</a>
+                          </div>
                         </div>
                       )}
                     </div>
@@ -65,9 +66,6 @@ export default function Reposteria() {
                 </div>
               </div>
             )))}
-          <div className="bg-green-900 w-1/2 mt-4 ml-auto mr-auto md:text-2xl text-xl text-white rounded-xl p-4 hover:text-4xl hover:mt-3">
-            <a href="https://api.whatsapp.com/send?phone=543489538212&text=Hola%20UmamiVeg">Hacer un Pedido</a>
-          </div>
         </div>
       </div>
     </>
