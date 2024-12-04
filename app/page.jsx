@@ -14,28 +14,28 @@ export default function Home() {
         </p>
       </div>
       <div className="absolute text-gray-100 left-4 top-1/4 text-left xl:w-1/4 w-1/2">
-        <p className="lg:text-2xl text-xl text-gray-100">
+        <p className="lg:text-4xl text-xl text-gray-100">
           Calidad Casera:
         </p>
-        <p className="lg:text-xl text-md text-gray-100">
+        <p className="lg:text-2xl text-md text-gray-100">
           Te ofrecemos comida vegana hecha con ingredientes frescos y de alta calidad. <br />
           Cada plato está preparado con amor y cuidado, como si lo hicieras en tu propia cocina.
         </p>
       </div>
       <div className="absolute text-gray-100 xl:left-3/4 left-1/2 top-1/3 text-left xl:w-1/4 w-1/2">
-        <p className="lg:text-2xl text-xl text-gray-100">
+        <p className="lg:text-4xl text-xl text-gray-100">
           Comodidad:
         </p>
-        <p className="lg:text-xl text-md text-gray-100">
+        <p className="lg:text-2xl text-md text-gray-100">
           ¿Estás ocupado y no tienes tiempo para cocinar? No te preocupes. Con nuestra comida lista para comer y nuestros productos congelados, puedes disfrutar de una comida nutritiva y deliciosa en cuestión de minutos,
           sin sacrificar tu salud ni el sabor.
         </p>
       </div>
       <div className="absolute text-gray-100 left-4 top-1/2 text-left xl:w-1/4 w-1/2">
-        <p className="lg:text-2xl text-xl text-gray-100">
+        <p className="lg:text-4xl text-xl text-gray-100">
           Más para contarte:
         </p>
-        <p className="lg:text-xl text-md text-gray-100">
+        <p className="lg:text-2xl text-md text-gray-100">
           ¡Nuestra comida a base de plantas no solo es saludable, sino deliciosa!
           Con sabores que compiten ¡y muchas veces superan! a los platos de origen animal,
           nuestras recetas han sorprendido a muchos. Desde hamburguesas hasta recetas japonesas,
@@ -44,10 +44,10 @@ export default function Home() {
         </p>
       </div>
       <div className="absolute text-gray-100 xl:left-3/4 left-1/2 top-3/4 text-left xl:w-1/4 w-1/2">
-        <p className="lg:text-2xl text-xl text-gray-100">
+        <p className="lg:text-4xl text-xl text-gray-100">
           Nuestros Precios:
         </p>
-        <p className="lg:text-xl text-md text-gray-100">
+        <p className="lg:text-2xl text-md text-gray-100">
           Comer vegano no tiene por qué ser caro.
           Nuestros precios son tan accesibles como los de cualquier otro menú,
           pero con el extra de que aquí todo es casero y preparado con ingredientes frescos.
