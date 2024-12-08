@@ -21,15 +21,15 @@ export default function Reposteria() {
 
   return (
     <>
-      <div className="relative bg-cover md:bg-top bg-center md:h-[2000px]  h-svh overflow-scroll text-center" style={{ backgroundImage: "url('/Reposteria2500x2500.jpg')" }}>
-        <div className="absolute text-xl text-white left-4 top-4">
+      <div className="relative bg-cover md:bg-top bg-center md:h-[2000px] h-svh overflow-scroll text-center" style={{ backgroundImage: "url('/Reposteria2500x2500.jpg')" }}>
+        <div className="absolute text-xl text-white w-full top-4">
           {showMenu && (
             menu.map((item, index) => (
               <div key={`${item.id}-${index}`}>
                 <p className="md:text-6xl text-2xl md:mb-4 mb-0 md:mt-8 mt-1 underline underline-offset-8">{(item.name).substring(11, 30)}:</p>
                 <div className=" flex flex-wrap">
                   {item.menu.map((category_menu) => (
-                    <div key={category_menu.id} className="bg-slate-900 bg-opacity-50 p-4 mr-4 mt-4 rounded-2xl md:w-96 w-11/12">
+                    <div key={category_menu.id} className="bg-slate-900 bg-opacity-50 p-4 mx-auto mt-4 rounded-2xl md:w-96 w-11/12">
                       {category_menu.checked && (
                         <div>
                           <div className="flex flex-row justify-center">
@@ -45,7 +45,7 @@ export default function Reposteria() {
                             <div className="basis-96">
                               <p className='md:text-xl text-lg mb-2 underline underline-offset-4'>{category_menu.name}</p>
                               <p className='md:text-sm text-xs mb-1 h-16'>{category_menu.description}</p>
-                              <p className='text-md mb-1'>Precio ${category_menu.price}</p>
+                              {/*<p className='text-md mb-1'>Precio ${category_menu.price}</p>*/}
 
                             </div>
                           </div>

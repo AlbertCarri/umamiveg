@@ -1,36 +1,30 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">
+Página Umamiveg  
+</h1>
 
-## Getting Started
+Página diseñada para un emprendimiento de comida vegana.   
+La página es dinámica, y el contenido varia según lo cargado en la base de datos.
+La base de datos relacional utilizada y las imágenes estan alojadas en Supabase.
+Los datos de las diferentes páginas de Umamiveg, menú, tienda, congelados y repostería, se cargan utilizando un servicio de CMS creado por mí también, el mismo almadena todos los datos en Supabase. Este CMS tiene varios usos, entre ellos, crear un menú digital accesible con un código QR.
 
-First, run the development server:
+En la página del Menú, es posible agregar productos al carrito y realizar el pedido a travez de Whatsapp
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<div align="center">
+<img with="100%" src="public/cart-01.jpg">
+</div>
+<br>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+En la ventana del carrito el cliente puede hacer varios pedidos del mismo producto o eliminarlo.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+<div align="center">
+<img with="100%" src="public/cart-02.jpg">
+</div>
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Al hacer click en el boton "Hacer pedido", un resumen del pedido es enviado via whatsapp, con todos los detalles, cantidades y total. El encargado de recibir el pedido por whatsapp, será el responsable de continuar con el mismo, coordinar los tiempos de entrega y cobro.
+Esta página no esta preparada para cobro online, ya que está preparada para facilitar el pedido por whatsapp de una manera más visual y ordenada.
+ 
+<h1>Características:</h1>  
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+ * El framework utilizado es NEXT.js, ya que es necesario el acceso a la base de datos via servidor.
+* Los estilos están hechos con Tailwind CSS
+* Las bases de datos y el store de las imágenes están alojadas y gestionadas con Supabase.

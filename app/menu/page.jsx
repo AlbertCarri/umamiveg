@@ -43,19 +43,26 @@ export default function Menu() {
 
   return (
     <>
-      <div className="relative bg-cover md:bg-top bg-center md:h-[2000px]  h-svh overflow-scroll text-center" style={{ backgroundImage: "url('/menu2500x2500.jpg')" }}>
+      <div className="relative bg-cover md:bg-top bg-center md:h-[2000px] h-svh overflow-scroll text-center" style={{ backgroundImage: "url('/menu2500x2500.jpg')" }}>
         <div className="absolute text-xl text-white w-full p-4">
           {!showMenu && (
-            <div className="absolute flex flex-row w-full justify-center top-8 text-2xl">
-              <button type="button" onClick={() => setShowMenu(true)} >
-                <img src="/takeaway.png" className="w-4/5 origin-center transition-all hover:scale-105" alt="pedidoya" />
-              </button>
-              <a href="https://www.pedidosya.com.ar/restaurantes/campana/umamiveg-comida-vegana-42acf7c3-29b8-404e-a4d9-1de35b204228-menu?origin=shop_list"
-                target="blank"
-                rel="noreferrer">
+            <div className="flex flex-col items-center w-full top-8 text-2xl p-8">
+              <div className="flex flex-row justify-between">
+                <button type="button" onClick={() => setShowMenu(true)} >
+                  <img src="/takeaway.png" className="m-auto w-4/5 transition-all hover:scale-105" alt="pedidoya" />
+                </button>
+                <a href="https://www.pedidosya.com.ar/restaurantes/campana/umamiveg-comida-vegana-42acf7c3-29b8-404e-a4d9-1de35b204228-menu?origin=shop_list"
+                  target="blank"
+                  rel="noreferrer">
 
-                <img src="/pedidosya.png" className="w-4/5 origin-center transition-all hover:scale-105 shadow-xl" alt="pedidoya" />
-              </a>
+                  <img src="/pedidosya.png" className="m-auto w-4/5 transition-all hover:scale-105 shadow-xl" alt="pedidoya" />
+                </a>
+              </div>
+              <div className="mt-16 md:text-4xl text-lg text-left">
+                <p>Podes pedir por la App de PedidosYa (incluye delivery).</p>
+                <p>O podes encargar por whatsapp con</p>
+                <p>la opción Retirar en local.</p>
+              </div>
             </div>
           )}
           {cart && (
@@ -70,16 +77,16 @@ export default function Menu() {
           )}
           {showCartContent && (
             <div>
-            <ShowCart cartContent={cartContent} setCartContent={setCartContent} setShowCartContent={setShowCartContent} />
+              <ShowCart cartContent={cartContent} setCartContent={setCartContent} setShowCartContent={setShowCartContent} />
             </div>
           )}
           {showMenu && (
             menu.map((item, index) => (
               <div key={`${item.id}-${index}`}>
-                <p className="md:text-6xl text-2xl md:mb-4 mb-0 md:mt-8 mt-1 underline underline-offset-8">{(item.name).substring(5, 20)}:</p>
+                <p className="bg-neutral-700 bg-opacity-75 p-1 md:text-6xl text-2xl md:mb-4 mb-0 md:mt-8 mt-4 rounded-lg">{(item.name).substring(5, 20)}:</p>
                 <div className=" flex flex-wrap">
                   {item.menu.map((category_menu) => (
-                    <div key={category_menu.id} className="bg-neutral-900 bg-opacity-75 p-4 mr-4 mt-4 rounded-2xl md:w-96 w-full">
+                    <div key={category_menu.id} className="bg-neutral-900 bg-opacity-75 p-4 m-auto mt-4 rounded-2xl md:w-96 w-11/12">
                       {category_menu.checked && (
                         <div>
                           <div className="flex flex-row justify-center">
@@ -93,7 +100,7 @@ export default function Menu() {
                               </div>
                             </div>
                             <div className="basis-96">
-                              <p className='md:text-xl text-lg mb-2 underline underline-offset-4'>{category_menu.name}</p>
+                              <p className='md:text-xl text-sm mb-2 underline underline-offset-4'>{category_menu.name}</p>
                               <p className='md:text-sm text-xs mb-1 h-16'>{category_menu.description}</p>
                               <p className='text-md mb-1'>Precio ${category_menu.price}</p>
                             </div>
@@ -104,7 +111,7 @@ export default function Menu() {
                               <p key={`${category_menu.id}-${index}`} className='bg-emerald-700 text-xs line-clamp-1 md:line-clamp-none rounded-sm px-1 mr-2 mb-1'>{alerg}</p>
                             )}
                           </div>
-                          <div className="bg-green-900 w-1/2 mt-1 ml-auto mr-auto md:text-lg text-ms text-white rounded-xl p-1 hover:bg-orange-800">
+                          <div className="bg-green-900 w-3/4 mt-1 ml-auto mr-auto md:text-lg text-ms text-white rounded-xl p-1 hover:bg-orange-800">
                             <button type="button" onClick={() => addCart(category_menu)}>Agregar al pedido</button>
                           </div>
                         </div>
