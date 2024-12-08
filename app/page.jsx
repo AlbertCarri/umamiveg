@@ -13,11 +13,12 @@ export default function Home() {
             Comida a base de plantas
           </p>
         </div>
-        <div className="absolute text-gray-100 left-4 top-1/4 text-left xl:w-1/4 w-1/2">
+        <div className="absolute text-gray-100 left-4 top-1/4 text-left w-1/2">
           <p className="lg:text-4xl text-xl text-gray-100">
-            Calidad Casera:
+            Quienes somos:
           </p>
           <p className="lg:text-2xl text-md text-gray-100">
+            Somos un emprendimiento familiar con una dark-kitchen o cocina fantasma.<br />
             Te ofrecemos comida vegana hecha con ingredientes frescos y de alta calidad. <br />
             Cada plato está preparado con amor y cuidado, como si lo hicieras en tu propia cocina.
           </p>
@@ -83,9 +84,10 @@ export default function Home() {
           </p>
           <div className="text-left ml-2">
             <p className="text-md text-gray-100 mt-4">
-              Calidad Casera:
+              Quienes somos?:
             </p>
             <p className="text-xs text-gray-100">
+            Somos un emprendimiento familiar con una dark-kitchen o cocina fantasma.<br />
               Te ofrecemos comida vegana hecha con ingredientes frescos y de alta calidad. <br />
               Cada plato está preparado con amor y cuidado, como si lo hicieras en tu propia cocina.
             </p>

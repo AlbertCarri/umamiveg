@@ -1,13 +1,21 @@
 <h1 align="center">
 Página UmamiVeg  
 </h1>
+<h3 align="center">
+Comida vegana  
+</h3>
+<br>
+<br>
+Página diseñada para un emprendimiento de comida vegana.  
 
-Página diseñada para un emprendimiento de comida vegana.   
-La página es dinámica, y el contenido varia según lo cargado en la base de datos.
+La idea es un sitio para compras online pero no con un carrito y canal de pago convencionales, sino con un enfoque diferente y moderno. Los pedidos son armados en un carrito y una vez finalizados se envían directamente al whatsapp.  
+Este nuevo enfoque da seguridad al cliente de que el pedido fue hecho, ya que se abre su app de whatsapp antes de enviar el pedido permitiendo chequear antes de dar el siguiente paso. Una vez enviado, se continua con una atención personalizada por el encargado de recepción de pedidos en whatsapp. 
+ 
+La página es dinámica, y el contenido varia según lo cargado en la base de datos.  
 La base de datos relacional utilizada y las imágenes estan alojadas en Supabase.  
-Los datos de las diferentes páginas de Umamiveg, menú, tienda, congelados y repostería, se cargan utilizando un servicio de CMS creado por mí también, el mismo almadena todos los datos en Supabase. Este CMS tiene varios usos, entre ellos, crear un menú digital accesible con un código QR.
+Los datos de las diferentes páginas de Umamiveg, menú, tienda, congelados y repostería, se cargan utilizando un servicio de CMS creado por mí también, el mismo almacena todos los datos en Supabase. Este CMS tiene varios usos, entre ellos, crear un menú digital accesible con un código QR.
 
-En la página del Menú, es posible agregar productos al carrito y realizar el pedido a través de Whatsapp
+En la página del Menú, es posible agregar productos al carrito y realizar el pedido a través de Whatsapp.
 
 <div align="center">
 <img with="100%" src="public/cart-01.jpg">
