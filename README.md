@@ -1,13 +1,13 @@
 <h1 align="center">
-Página Umamiveg  
+Página UmamiVeg  
 </h1>
 
 Página diseñada para un emprendimiento de comida vegana.   
 La página es dinámica, y el contenido varia según lo cargado en la base de datos.
-La base de datos relacional utilizada y las imágenes estan alojadas en Supabase.
+La base de datos relacional utilizada y las imágenes estan alojadas en Supabase.  
 Los datos de las diferentes páginas de Umamiveg, menú, tienda, congelados y repostería, se cargan utilizando un servicio de CMS creado por mí también, el mismo almadena todos los datos en Supabase. Este CMS tiene varios usos, entre ellos, crear un menú digital accesible con un código QR.
 
-En la página del Menú, es posible agregar productos al carrito y realizar el pedido a travez de Whatsapp
+En la página del Menú, es posible agregar productos al carrito y realizar el pedido a través de Whatsapp
 
 <div align="center">
 <img with="100%" src="public/cart-01.jpg">
@@ -28,3 +28,7 @@ Esta página no esta preparada para cobro online, ya que está preparada para fa
  * El framework utilizado es NEXT.js, ya que es necesario el acceso a la base de datos via servidor.
 * Los estilos están hechos con Tailwind CSS
 * Las bases de datos y el store de las imágenes están alojadas y gestionadas con Supabase.
+ 
+ <h2>Link a la página:</h2>  
+
+ [Página de UmamiVeg](https://umamiveg.vercel.app/)
