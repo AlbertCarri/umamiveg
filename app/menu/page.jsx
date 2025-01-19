@@ -86,9 +86,9 @@ export default function Menu() {
                 <p className="bg-neutral-700 bg-opacity-75 p-1 md:text-6xl text-2xl md:mb-4 mb-0 md:mt-8 mt-4 rounded-lg">{(item.name).substring(5, 20)}:</p>
                 <div className=" flex flex-wrap">
                   {item.menu.map((category_menu) => (
-                    <div key={category_menu.id} className="bg-neutral-900 bg-opacity-75 p-4 m-auto mt-4 rounded-2xl md:w-96 w-11/12">
+                    <div key={category_menu.id} className=""> 
                       {category_menu.checked && (
-                        <div>
+                        <div  className="bg-neutral-900 bg-opacity-75 p-4 m-auto mt-4 mr-8 rounded-2xl md:w-96 w-11/12">
                           <div className="flex flex-row justify-center">
                             <div className="basis-40">
                               <div className='rounded-lg mr-4 items-center w-28 h-28 overflow-hidden'>
