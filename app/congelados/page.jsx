@@ -22,18 +22,17 @@ export default function Congelados() {
 
   return (
     <>
-      <div className="relative bg-cover md:bg-top bg-center md:h-[2000px]  h-svh overflow-scroll text-center" style={{ backgroundImage: "url('/congelados2500x2500.jpg')" }}>
-
-        <div className="absolute text-xl text-white w-full top-4">
+      <div className="relative bg-cover md:bg-top bg-center md:h-[2000px]  h-svh overflow-scroll text-center" 
+      style={{ backgroundImage: "url('/congelados2500x2500.jpg')" }}>
           {showMenu && (
             menu.map((item, index) => (
-              <div key={`${item.id}-${index}`}>
+              <div key={`${item.id}-${index}`} className="flex flex-col">
                 <p className="md:text-6xl text-2xl md:mb-4 mb-0 md:mt-8 mt-1 underline underline-offset-8">{(item.name).substring(11, 40)}:</p>
-                <div className=" flex flex-wrap">
+                <div className="flex flex-wrap justify-around ">
                   {item.menu.map((category_menu) => (
-                    <div key={category_menu.id} className="bg-slate-900 bg-opacity-50 p-4 m-auto mt-4 rounded-2xl md:w-96 w-11/12">
+                    <div key={category_menu.id} >
                       {category_menu.checked && (
-                        <div>
+                        <div className="bg-slate-900 bg-opacity-50 p-4 m-auto mt-4 rounded-2xl md:w-96 w-11/12">
                           <div className="flex flex-row justify-center">
                             <div className="basis-40">
                               <div className='rounded-lg mr-4 items-center w-28 h-28 overflow-hidden'>
@@ -58,17 +57,15 @@ export default function Congelados() {
                             )}
                           </div>
                           <div className="w-full border-zinc-500 border-t p-2 flex justify-center"></div> {/* línea separadora*/}
-                          <div className="bg-green-900 w-1/2 mt-4 ml-auto mr-auto md:text-xl text-md text-white rounded-xl p-2 hover:bg-green-950">
-                            <a href="https://api.whatsapp.com/send?phone=543489538212&text=Hola%20UmamiVeg.%20Tengo%20una%20consulta.">Hacer consulta</a>
-                          </div>
-                        </div>
+                            <a href="https://api.whatsapp.com/send?phone=543489538212&text=Hola%20UmamiVeg.%20Tengo%20una%20consulta." target="blanck"rel="noopener noreferrer" className="bg-green-900 w-1/2 mt-4 ml-auto mr-auto md:text-xl text-md text-white rounded-xl p-3 hover:bg-green-950 cursor-pointer">Hacer consulta</a>
+                          </div>                   
                       )}
                     </div>
                   ))}
                 </div>
               </div>
             )))}
-        </div>
+        
       </div>
     </>
   )

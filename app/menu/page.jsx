@@ -83,12 +83,14 @@ export default function Menu() {
           {showMenu && (
             menu.map((item, index) => (
               <div key={`${item.id}-${index}`}>
-                <p className="bg-neutral-700 bg-opacity-75 p-1 md:text-6xl text-2xl md:mb-4 mb-0 md:mt-8 mt-4 rounded-lg">{(item.name).substring(5, 20)}:</p>
-                <div className=" flex flex-wrap">
+                <p className="bg-neutral-700 bg-opacity-75 p-1 md:text-6xl text-2xl md:mb-4 mb-0 md:mt-8 mt-4 rounded-lg"
+                >{(item.name).substring(5, 20)}:
+                </p>
+                <div className=" flex flex-wrap justify-center">
                   {item.menu.map((category_menu) => (
-                    <div key={category_menu.id} className=""> 
+                    <div key={category_menu.id}>
                       {category_menu.checked && (
-                        <div  className="bg-neutral-900 bg-opacity-75 p-4 m-auto mt-4 mr-8 rounded-2xl md:w-96 w-11/12">
+                        <div className="bg-neutral-900 bg-opacity-75 p-4 m-4 mt-4 mr-8 rounded-2xl md:w-96 w-11/12">
                           <div className="flex flex-row justify-center">
                             <div className="basis-40">
                               <div className='rounded-lg mr-4 items-center w-28 h-28 overflow-hidden'>
@@ -111,9 +113,9 @@ export default function Menu() {
                               <p key={`${category_menu.id}-${index}`} className='bg-emerald-700 text-xs line-clamp-1 md:line-clamp-none rounded-sm px-1 mr-2 mb-1'>{alerg}</p>
                             )}
                           </div>
-                          <div className="bg-green-900 w-3/4 mt-1 ml-auto mr-auto md:text-lg text-ms text-white rounded-xl p-1 hover:bg-orange-800">
-                            <button type="button" onClick={() => addCart(category_menu)}>Agregar al pedido</button>
-                          </div>
+                          <button type="button"
+                            onClick={() => addCart(category_menu)}
+                            className="bg-green-900 w-3/4 mt-1 ml-auto mr-auto md:text-lg text-ms text-white rounded-xl p-1 hover:bg-orange-800">Agregar al pedido</button>
                         </div>
                       )}
                     </div>
