@@ -59,6 +59,7 @@ export default function Reposteria() {
             <ShowCart cartContent={cartContent} setCartContent={setCartContent} setShowCartContent={setShowCartContent} />
           </div>
         )}
+        
         {!showMenu && <div className="loader m-auto mt-96"></div>}
         {showMenu && (
           menu.map((item, index) => (
