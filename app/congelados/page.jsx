@@ -90,7 +90,7 @@ export default function Congelados() {
 
   return (
     <>
-      <div className="relative bg-cover md:bg-top bg-center md:h-[2000px]  h-svh overflow-scroll text-center"
+      <div className="relative bg-cover md:bg-top bg-center md:h-[2000px] scrollbar-hide h-svh overflow-scroll text-center"
         style={{ backgroundImage: "url('/congelados2500x2500.jpg')" }}>
         {cart && (
           <>

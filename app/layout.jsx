@@ -39,24 +39,18 @@ export default function RootLayout({ children }) {
                 <p>Alberto Carrizo</p>
               </div>
               <div className="basis-1/3">
-                <b>React Framework:</b>
-                <p>Hecho con NEXT.js</p>
+                <b>Necesitas una Página Web?</b>
+                <p>wottan@live.com.ar</p>
               </div>
-              <div className="basis-1/3 flex flex-row justify-center md:space-x-4 space-x-0">
+              <div className="basis-1/3 flex flex-row justify-center items-center md:space-x-4 space-x-0">
                 <a
-                  href="https://www.linkedin.com/in/alberto-edelmiro-carrizo-7639a186/"
+                  href="https://www.instagram.com/umami.veg/"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <img src="/linkedin.png" alt="logo" width={48} className="mx-auto md:scale-100 scale-75" />
+                  <img src="/instagram.png" alt="logo" width={48} className="mx-auto md:scale-100 scale-75" /> 
                 </a>
-                <a
-                  href="https://github.com/AlbertCarri"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img src="/github.png" alt="logo" width={48} className="mx-auto md:scale-100 scale-75" />
-                </a>
+                <p>Instagram de UmamiVeg</p>
               </div>
             </div>
           </div>
