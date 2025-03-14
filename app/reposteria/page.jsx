@@ -42,7 +42,7 @@ export default function Reposteria() {
   return (
     <>
       <div className="relative bg-cover md:bg-top bg-center md:h-[2000px] h-svh overflow-scroll scrollbar-hide text-center"
-        style={{ backgroundImage: "url('/Reposteria2500x2500.jpg')" }}>
+        style={{ backgroundImage: "url('/Reposteria2500x2500.webp')" }}>
 
         {cart && (
           <>

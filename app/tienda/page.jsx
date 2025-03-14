@@ -51,7 +51,7 @@ export default function Tienda() {
     <>
       <div
         className="relative bg-cover md:bg-top bg-center md:h-[2000px] h-svh overflow-scroll scrollbar-hide text-center"
-        style={{ backgroundImage: "url('/Tienda2500x2500.jpg')" }}
+        style={{ backgroundImage: "url('/Tienda2500x2500.webp')" }}
       >
         {cart && (
           <>

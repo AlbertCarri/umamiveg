@@ -43,7 +43,7 @@ export default function Menu() {
 
   return (
     <>
-      <div className="relative bg-cover md:bg-top bg-center md:h-[2000px] h-svh overflow-scroll scrollbar-hide text-center" style={{ backgroundImage: "url('/menu2500x2500.jpg')" }}>
+      <div className="relative bg-cover md:bg-top bg-center md:h-[2000px] h-svh overflow-scroll scrollbar-hide text-center" style={{ backgroundImage: "url('/menu2500x2500.webp')" }}>
         <div className="absolute text-xl text-white w-full p-4">
           {!showMenu && (
             <div className="flex flex-col items-center w-full top-8 text-2xl p-8">

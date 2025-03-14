@@ -8,14 +8,15 @@
 }
 
 @font-face {
-  font-family: 'UbuntuCondensed-Regular';
-  src: url('/UbuntuCondensed-Regular.ttf') format('truetype');
+  font-family: "UbuntuCondensed-Regular";
+  src: url("/UbuntuCondensed-Regular.woff") format("woff"),
+    url("/UbuntuCondensed-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
 
 body {
-  font-family: 'UbuntuCondensed-Regular';
+  font-family: "UbuntuCondensed-Regular";
   color: var(--foreground);
   background: var(--background);
   padding: 0;
@@ -55,7 +56,7 @@ body {
   margin-right: auto;
   border-radius: 20px;
   border: 2px solid white;
-  box-shadow: 16px 16px 20px rgba(0, 0, 0, .6);
+  box-shadow: 16px 16px 20px rgba(0, 0, 0, 0.6);
   background: rgb(31, 3, 3);
   color: aliceblue;
   z-index: 2;
@@ -73,7 +74,10 @@ body {
 }
 
 .loader:before {
-  content:"Loading..."
+  content: "Loading...";
 }
-@keyframes l5 {to{clip-path: inset(0 -1ch 0 0)}}
-
+@keyframes l5 {
+  to {
+    clip-path: inset(0 -1ch 0 0);
+  }
+}

@@ -4,7 +4,7 @@ export default function Home() {
     <>
       {/* Sección para pantallas horizontales grandes */}
       <div className="md:block hidden relative">
-        <img src="/BackGroundMain-mini.jpg" className="w-full object-fill" loading="lazy" />
+        <img src="/BackGroundMain-mini.webp" className="w-full object-fill" loading="lazy" />
         <div className="absolute text-gray-100 w-full text-center top-10">
           <p className="text-8xl text-gray-100">
             UmamiVeg

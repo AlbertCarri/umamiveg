@@ -11,8 +11,8 @@ export default function Contacto() {
 
     return (
         <>
-            <div className="relative bg-cover flex flex-col md:bg-top bg-center md:h-[2000px] h-svh overflow-scroll text-center items-center"
-                style={{ backgroundImage: "url('/Contacto2500x2500.jpg')" }}>
+            <div className="relative bg-cover flex flex-col md:bg-top bg-center md:h-[2000px] h-svh overflow-scroll scrollbar-hide text-center items-center"
+                style={{ backgroundImage: "url('/Contacto2500x2500.webp')" }}>
                 <form onSubmit={sendWhatsapp} className="flex flex-col w-full items-center p-2">
                     <textarea placeholder="Ingrese su Consulta" className="text-gray-900 text-2xl md:w-2/3 w-full p-8 mt-16 rounded-2xl" />
                     <button type="submit" className="bg-green-700 py-4 px-6 mt-4 rounded-xl text-xl hover:bg-green-800">Enviar consulta</button>
