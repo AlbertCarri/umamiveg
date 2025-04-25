@@ -1,6 +1,7 @@
 import "./globals.css";
 import MenuBurger from "@/components/menuBurger";
-
+import Footer from "@/components/Footer";
+import MenuNoSmartPhone from "@/components/MenuNoSmartPhone";
 
 export const metadata = {
   title: "Umamiveg",
@@ -14,48 +15,29 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body>
-        <nav className="flex items-center justify-between p-2  bg-gray-800 text-gray-100" aria-label="Navegación principal">
+        <nav
+          className="flex items-center justify-between p-2  bg-gray-800 text-gray-100"
+          aria-label="Navegación principal"
+        >
           <a href="/" className="flex items-center">
-            <img src="/Etiqueta-UMAMIVEG-Nuevo.png" alt="Logo Umamiveg" width={100} className="md:mr-4 mr-2" />
+            <img
+              src="/Etiqueta-UMAMIVEG-Nuevo.png"
+              alt="Logo Umamiveg"
+              width={100}
+              className="md:mr-4 mr-2"
+            />
             <span className="md:text-4xl text-3xl font-bold p-2">UmamiVeg</span>
           </a>
           <div className="hidden md:flex space-x-4 lg:text-xl text-md mr-4">
-            <a href="menu" className="hover:text-lime-400">Menú</a>
-            <a href="congelados" className="hover:text-lime-400">Congelados</a>
-            <a href="tienda" className="hover:text-lime-400">Tienda</a>
-            <a href="reposteria" className="hover:text-lime-400">Repostería</a>
-            <a href="contacto" className="hover:text-lime-400">Contacto</a>
+            <MenuNoSmartPhone />
           </div>
           <div className="md:hidden">
             <MenuBurger />
           </div>
         </nav>
         {children}
-        <footer className="bg-black text-white md:text-xl text-xs ">
-          <div className="w-full m-0 p-4">
-            <div className="flex flex-row text-center">
-              <div className="basis-1/3">
-                <b>Desarrollador:</b>
-                <p>Alberto Carrizo</p>
-              </div>
-              <div className="basis-1/3">
-                <b>Necesitas una Página Web?</b>
-                <p>wottan@live.com.ar</p>
-              </div>
-              <div className="basis-1/3 flex flex-row justify-center items-center md:space-x-4 space-x-0">
-                <a
-                  href="https://www.instagram.com/umami.veg/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img src="/instagram.png" alt="logo" width={48} className="mx-auto md:scale-100 scale-75" /> 
-                </a>
-                <p>Instagram de UmamiVeg</p>
-              </div>
-            </div>
-          </div>
-        </footer>
+        <Footer />
       </body>
     </html>
-  )
+  );
 }
