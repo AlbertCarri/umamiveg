@@ -81,7 +81,7 @@ export default function Tienda() {
           menu.map((item, index) => (
             <div key={`${item.id}-${index}`}>
               <p className="md:text-6xl text-2xl md:mb-4 mb-0 md:mt-8 mt-1 underline underline-offset-8">
-                {item.name.substring(7, 40)}:
+                Tienda:
               </p>
               <div className=" flex flex-wrap">
                 {item.menu.map((category_menu) => (

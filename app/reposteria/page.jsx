@@ -13,7 +13,7 @@ export default async function Reposteria() {
         style={{ backgroundImage: "url('/Reposteria2500x2500.webp')" }}
       >
         {!menu && <div className="loader m-auto mt-96"></div>}
-        {menu && <StoreAddCartButton menu={menu} />}
+        {menu && <StoreAddCartButton menu={menu} name={'Repostería casera vegana y apto APLV '} />}
       </div>
     </>
   );

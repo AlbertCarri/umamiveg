@@ -13,7 +13,7 @@ export default async function Congelados() {
         style={{ backgroundImage: "url('/congelados2500x2500.webp')" }}
       >
         {!menu && <div className="loader m-auto mt-96"></div>}
-        {menu && <StoreAddCartButton menu={menu} />}
+        {menu && <StoreAddCartButton menu={menu} name={'Congelados caseros a pedido apta APLV'} />}
       </div>
     </>
   );
