@@ -36,7 +36,7 @@ export default function WhatsappOrPedidosya({ menu }) {
           </div>
         </div>
       )}
-      {showMenu && <StoreAddCartButton menu={menu} name={'Menú diario de comida vegana apta APLV'} />}
+      {showMenu && <StoreAddCartButton menu={menu} name={'null'} />}
     </>
   );
 }

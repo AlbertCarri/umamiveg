@@ -3,7 +3,7 @@
 import ShowCart from "@/components/showcart.jsx";
 import { useState } from "react";
 
-export const StoreAddCartButton = ({menu,name}) => {
+export const StoreAddCartButton = ({ menu, name }) => {
   const [cart, setCart] = useState(false);
   const [cartContent, setCartContent] = useState([]);
   const [showCartContent, setShowCartContent] = useState(false);
@@ -60,7 +60,7 @@ export const StoreAddCartButton = ({menu,name}) => {
       {menu.map((item, index) => (
         <div key={`${item.id}-${index}`} className="flex flex-col">
           <p className="md:text-6xl text-2xl md:mb-4 mb-0 md:mt-8 mt-1 underline underline-offset-8">
-            {name}
+            {name === "null" ? item.name.replace('menu-','') : name}
           </p>
           <div className="flex flex-wrap justify-around ">
             {item.menu.map((category_menu) => (
