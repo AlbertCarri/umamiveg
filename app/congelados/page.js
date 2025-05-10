@@ -1,6 +1,6 @@
 "use server";
 
-export const fetchCache = 'force-no-store';
+export const revalidate = 0;
 
 import { StoreAddCartButton } from "@/components/StoreAddCartButton";
 import { getCongelados } from "@/lib/getCongelados";
