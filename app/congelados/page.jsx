@@ -3,6 +3,8 @@
 import { StoreAddCartButton } from "@/components/StoreAddCartButton";
 import { getCongelados } from "@/lib/getCongelados";
 
+export const dynamic="force-dynamic"
+
 export default async function Congelados() {
   const menu = await getCongelados();
 
