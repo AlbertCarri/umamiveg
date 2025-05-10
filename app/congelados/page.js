@@ -2,10 +2,10 @@
 
 import { StoreAddCartButton } from "@/components/StoreAddCartButton";
 import { getCongelados } from "@/lib/getCongelados";
-
-export const dynamic = "force-dynamic";
+import { connection } from "next/server";
 
 export default async function Congelados() {
+  await connection();
   const menu = await getCongelados();
 
   return (
