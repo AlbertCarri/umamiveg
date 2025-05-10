@@ -1,11 +1,11 @@
 "use server";
 
+export const fetchCache = 'force-no-store';
+
 import { StoreAddCartButton } from "@/components/StoreAddCartButton";
 import { getCongelados } from "@/lib/getCongelados";
-import { connection } from "next/server";
 
 export default async function Congelados() {
-  await connection();
   const menu = await getCongelados();
 
   return (
