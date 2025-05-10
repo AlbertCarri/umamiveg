@@ -1,11 +1,11 @@
 "use server";
 
-export const revalidate = 0;
-
 import { StoreAddCartButton } from "@/components/StoreAddCartButton";
 import { getCongelados } from "@/lib/getCongelados";
+import { connection } from "next/server";
 
 export default async function Congelados() {
+  await connection();
   const menu = await getCongelados();
 
   return (
