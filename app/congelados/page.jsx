@@ -3,7 +3,7 @@
 import { StoreAddCartButton } from "@/components/StoreAddCartButton";
 import { getCongelados } from "@/lib/getCongelados";
 
-export const dynamic="force-dynamic"
+export const dynamic = "force-dynamic";
 
 export default async function Congelados() {
   const menu = await getCongelados();
@@ -15,7 +15,12 @@ export default async function Congelados() {
         style={{ backgroundImage: "url('/congelados2500x2500.webp')" }}
       >
         {!menu && <div className="loader m-auto mt-96"></div>}
-        {menu && <StoreAddCartButton menu={menu} name={'Congelados caseros a pedido apta APLV'} />}
+        {menu && (
+          <StoreAddCartButton
+            menu={menu}
+            name={"Congelados caseros a pedido apta APLV"}
+          />
+        )}
       </div>
     </>
   );
