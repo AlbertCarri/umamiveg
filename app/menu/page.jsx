@@ -2,8 +2,10 @@
 
 import WhatsappOrPedidosya from "@/components/WhatsappOrPedidosya";
 import { getMenu } from "@/lib/getMenu";
+import { connection } from "next/server";
 
 export default async function Menu() {
+  await connection();
   const menu = await getMenu();
 
   return (
