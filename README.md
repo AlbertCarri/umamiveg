@@ -1,22 +1,47 @@
 <h1 align="center">
 Página UmamiVeg  
 </h1>
-<h3 align="center">
-Comida vegana  
-</h3>
 <br>
 <br>
-Página diseñada para un emprendimiento de comida vegana.  
+<br>
 
-La idea es un sitio para compras online pero no con un carrito y canal de pago convencionales, sino con un enfoque diferente y moderno. Los pedidos son armados en un carrito y una vez finalizados se envían directamente al whatsapp.  
-Este nuevo enfoque da seguridad al cliente de que el pedido fue hecho, ya que se abre su app de whatsapp antes de enviar el pedido permitiendo chequear antes de dar el siguiente paso. Una vez enviado, se continua con una atención personalizada por el encargado de recepción de pedidos en whatsapp. 
- 
-La página es dinámica, y el contenido varia según lo cargado en la base de datos.  
-La base de datos relacional utilizada y las imágenes estan alojadas en Supabase.  
-Los datos de las diferentes páginas de Umamiveg, menú, tienda, congelados y repostería, se cargan utilizando un servicio de CMS creado por mí también, el mismo almacena todos los datos en Supabase. Este CMS tiene varios usos, entre ellos, crear un menú digital accesible con un código QR.
+### Página web para un emprendimiento de comida vegana, diseñada para facilitar pedidos online de una manera moderna y diferente.
+<br>
+<br> 
 
-En la página del Menú, es posible agregar productos al carrito y realizar el pedido a través de Whatsapp.
+## 📜Descripción 
 
+<br>
+<br>
+UmamiVeg es un sitio web dinámico orientado a la venta de comida vegana. A diferencia de otras tiendas, no utiliza un canal de pago convencional; los pedidos se arman en un carrito y, al finalizar la compra, el pedido se envía a través de WhatsApp. Esto permite al cliente revisar el pedido en su app antes de enviarlo, brindando mayor seguridad y control.
+
+El contenido de la página varía según la información almacenada en la base de datos, la cual —junto con las imágenes— está alojada en Supabase. Además, el CMS para gestionar los datos también es de desarrollo propio.
+<br>
+<br>
+## 🛠Características principales:   
+
+``Pedidos por WhatsApp``: El cliente puede agregar productos al carrito y, al finalizar, enviar el pedido por WhatsApp. Así, revisa y confirma el pedido antes de enviarlo.   
+
+``Dinámica y autogestiva``: Todo el contenido (menú, tienda, congelados, repostería) se carga dinámicamente desde la base de datos.   
+
+``Gestión de productos``: Es posible agregar o eliminar productos y modificar cantidades directamente en el carrito.   
+
+``Sin pagos online``: El enfoque está en la gestión visual y ordenada del pedido, no en el pago online.   
+<br>
+<br>
+## 🛠Tecnologías utilizadas   
+
+``Next.js``: Framework principal del proyecto, ideal para aplicaciones dinámicas y acceso vía servidor a base de datos.  
+
+``React``: Librería para la construcción de interfaces de usuario.   
+
+``Tailwind CSS``: Utilizado para los estilos.   
+
+``Supabase``: Almacena la base de datos relacional y las imágenes.   
+
+``Otros``: Integración con WhatsApp, gestión CMS propia.   
+<br>
+<br>
 <div align="center">
 <img with="100%" src="public/cart-01.jpg">
 </div>
@@ -31,11 +56,7 @@ En la ventana del carrito el cliente puede hacer varios pedidos del mismo produc
 Al hacer click en el boton "Hacer pedido", un resumen del pedido es enviado via whatsapp, con todos los detalles, cantidades y total. El encargado de recibir el pedido por whatsapp, será el responsable de continuar con el mismo, coordinar los tiempos de entrega y cobro.
 Esta página no esta preparada para cobro online, ya que está preparada para facilitar el pedido por whatsapp de una manera más visual y ordenada.
  
-<h1>Características:</h1>  
 
- * El framework utilizado es NEXT.js, ya que es necesario el acceso a la base de datos via servidor.
-* Los estilos están hechos con Tailwind CSS
-* Las bases de datos y el store de las imágenes están alojadas y gestionadas con Supabase.
  
  <h2>Link a la página:</h2>  
 
