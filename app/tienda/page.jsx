@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import ShowCart from "@/components/showcart.jsx";
+import { Chatbot } from "@/components/Chatbot";
 
 export default function Tienda() {
   const [menu, setMenu] = useState([]);
@@ -49,6 +50,7 @@ export default function Tienda() {
 
   return (
     <>
+      <Chatbot className={"bg-slate-800"} />
       <div
         className="relative bg-cover md:bg-top bg-center md:h-[2000px] h-svh overflow-scroll scrollbar-hide text-center"
         style={{ backgroundImage: "url('/Tienda2500x2500.webp')" }}

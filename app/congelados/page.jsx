@@ -3,6 +3,7 @@
 import { StoreAddCartButton } from "@/components/StoreAddCartButton";
 import { getCongelados } from "@/lib/getCongelados";
 import { connection } from "next/server";
+import { Chatbot } from "/components/Chatbot";
 
 export default async function Congelados() {
   await connection();
@@ -22,6 +23,7 @@ export default async function Congelados() {
           />
         )}
       </div>
+      <Chatbot className={'bg-slate-800'} />
     </>
   );
 }

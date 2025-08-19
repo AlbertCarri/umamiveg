@@ -3,6 +3,7 @@
 import { getReposteria } from "@/lib/getReposteria";
 import { StoreAddCartButton } from "@/components/StoreAddCartButton";
 import { connection } from "next/server";
+import { Chatbot } from "@/components/Chatbot";
 
 export default async function Reposteria() {
   await connection();
@@ -10,6 +11,7 @@ export default async function Reposteria() {
 
   return (
     <>
+      <Chatbot className={"bg-slate-800"} />
       <div
         className="relative bg-cover md:bg-top bg-center md:h-[2000px] h-svh overflow-scroll scrollbar-hide text-center"
         style={{ backgroundImage: "url('/Reposteria2500x2500.webp')" }}

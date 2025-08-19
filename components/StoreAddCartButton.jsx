@@ -2,6 +2,7 @@
 
 import ShowCart from "@/components/showcart.jsx";
 import { useState } from "react";
+import { Chatbot } from "./Chatbot";
 
 export const StoreAddCartButton = ({ menu, name }) => {
   const [cart, setCart] = useState(false);
@@ -34,6 +35,7 @@ export const StoreAddCartButton = ({ menu, name }) => {
 
   return (
     <>
+    <Chatbot className={'bg-slate-800'} />
       {cart && (
         <>
           <button
