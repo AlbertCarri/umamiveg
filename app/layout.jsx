@@ -16,6 +16,7 @@ export default function RootLayout({ children }) {
     <html lang="es">
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
+        <meta name="google-site-verification" content="DKdWxgehorVyZzNTiSlzT7AHp7s2TRpln9yBrFYXGJQ" />
       </head>
       <body>
         <nav
