@@ -6,6 +6,9 @@ import MenuNoSmartPhone from "@/components/MenuNoSmartPhone";
 export const metadata = {
   title: "Umamiveg",
   description: "Umamiveg comida vegana",
+  verification: {
+    google: "DKdWxgehorVyZzNTiSlzT7AHp7s2TRpln9yBrFYXGJQ",
+  },
 };
 
 export default function RootLayout({ children }) {
