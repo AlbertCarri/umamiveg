@@ -4,8 +4,8 @@ import Footer from "@/components/Footer";
 import MenuNoSmartPhone from "@/components/MenuNoSmartPhone";
 
 export const metadata = {
-  title: "Umamiveg",
-  description: "Umamiveg comida vegana",
+  title: "Umamiveg | Comida vegana casera en Campana",
+  description: "Umamiveg comida vegana. Menús veganos y 100% a base de platas. Pedidos online",
   verification: {
     google: "DKdWxgehorVyZzNTiSlzT7AHp7s2TRpln9yBrFYXGJQ",
   },
