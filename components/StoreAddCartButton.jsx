@@ -61,8 +61,8 @@ export const StoreAddCartButton = ({ menu, name }) => {
       )}
       {menu.map((item, index) => (
         <div key={`${item.id}-${index}`} className="flex flex-col">
-          <p className="md:text-6xl text-2xl md:mb-4 mb-0 md:mt-8 mt-1 underline underline-offset-8">
-            {name === "null" ? item.name.replace('menu-','') : name}
+          <p className="md:text-6xl text-2xl md:mb-4 mb-0 md:mt-16 mt-8 underline underline-offset-8">
+            {name === "null" ? item.name.replace('menu-','').toUpperCase() : name.toUpperCase()}
           </p>
           <div className="flex flex-wrap justify-around ">
             {item.menu.map((category_menu) => (

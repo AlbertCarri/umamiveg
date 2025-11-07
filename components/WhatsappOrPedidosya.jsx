@@ -7,7 +7,8 @@ export default function WhatsappOrPedidosya({ menu }) {
   const [showMenu, setShowMenu] = useState(false);
   return (
     <>
-      {!showMenu && (
+    {/* Desactivado mientras no funcione PedidosYA */}
+      {/*{!showMenu && (
         <div className="flex flex-col items-center w-full top-8 text-2xl p-8">
           <div className="flex flex-row justify-between">
             <button type="button" onClick={() => setShowMenu(true)}>
@@ -35,8 +36,8 @@ export default function WhatsappOrPedidosya({ menu }) {
             <p>la opción Retirar en local.</p>
           </div>
         </div>
-      )}
-      {showMenu && <StoreAddCartButton menu={menu} name={'null'} />}
+      )}*/}
+      <StoreAddCartButton menu={menu} name={'null'} />
     </>
   );
 }

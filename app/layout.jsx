@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <nav
-          className="flex items-center justify-between p-2  bg-gray-800 text-gray-100"
+          className="flex items-center justify-between p-0 bg-gray-800 text-gray-100"
           aria-label="Navegación principal"
         >
           <a href="/" className="flex items-center">

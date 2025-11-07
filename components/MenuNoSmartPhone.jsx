@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function MenuNoSmartPhone() {
   return (
-    <>
+    <div className="text-2xl space-x-4">
       <Link href="/menu" className="hover:text-lime-400">
         Menú
       </Link>
@@ -18,6 +18,6 @@ export default function MenuNoSmartPhone() {
       <Link href="/contacto" className="hover:text-lime-400">
         Contacto
       </Link>
-    </>
+    </div>
   );
 }
