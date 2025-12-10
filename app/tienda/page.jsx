@@ -85,6 +85,7 @@ export default function Tienda() {
               <p className="md:text-6xl text-2xl md:mb-4 mb-0 md:mt-4 mt-1 underline underline-offset-8">
                 {item.name.replace('tienda-','').toUpperCase()}
               </p>
+              <p className="md:text-4xl text-xl md:mb-4 mb-0 md:mt-4 mt-1">{'(Pedidos con seña del 50%)'}</p>
               <div className=" flex flex-wrap justify-center mb-16">
                 {item.menu.map((category_menu) => (
                   <div key={category_menu.id}>
