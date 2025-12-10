@@ -82,10 +82,10 @@ export default function Tienda() {
         {showMenu &&
           menu.map((item, index) => (
             <div key={`${item.id}-${index}`}>
-              <p className="md:text-6xl text-2xl md:mb-4 mb-0 md:mt-8 mt-1 underline underline-offset-8">
-                Tienda:
+              <p className="md:text-6xl text-2xl md:mb-4 mb-0 md:mt-4 mt-1 underline underline-offset-8">
+                {item.name.replace('tienda-','').toUpperCase()}
               </p>
-              <div className=" flex flex-wrap">
+              <div className=" flex flex-wrap justify-center mb-16">
                 {item.menu.map((category_menu) => (
                   <div key={category_menu.id}>
                     {category_menu.checked && (
