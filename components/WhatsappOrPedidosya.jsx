@@ -7,36 +7,13 @@ export default function WhatsappOrPedidosya({ menu }) {
   const [showMenu, setShowMenu] = useState(false);
   return (
     <>
-    {/* Desactivado mientras no funcione PedidosYA */}
-      {/*{!showMenu && (
-        <div className="flex flex-col items-center w-full top-8 text-2xl p-8">
-          <div className="flex flex-row justify-between">
-            <button type="button" onClick={() => setShowMenu(true)}>
-              <img
-                src="/takeaway.png"
-                className="m-auto w-4/5 transition-all hover:scale-105"
-                alt="pedidoya"
-              />
-            </button>
-            <a
-              href="https://www.pedidosya.com.ar/restaurantes/campana/umamiveg-comida-vegana-42acf7c3-29b8-404e-a4d9-1de35b204228-menu?origin=shop_list"
-              target="blank"
-              rel="noreferrer"
-            >
-              <img
-                src="/pedidosya.png"
-                className="m-auto w-4/5 transition-all hover:scale-105 shadow-xl"
-                alt="pedidoya"
-              />
-            </a>
-          </div>
-          <div className="mt-16 md:text-4xl text-lg text-left">
-            <p>Podes pedir por la App de PedidosYa (incluye delivery).</p>
-            <p>O podes encargar por whatsapp con</p>
-            <p>la opción Retirar en local.</p>
-          </div>
-        </div>
-      )}*/}
+   
+        <p className="md:text-4xl text-xl md:mb-2 mb-0">
+        Horarios : de Lunes a Sábados
+      </p>
+      <p className="md:text-3xl text-xl md:mb-8 mb-4 ">
+        de 12hs a 14hs y de 20hs a 23hs
+      </p>
       <StoreAddCartButton menu={menu} name={'null'} />
     </>
   );

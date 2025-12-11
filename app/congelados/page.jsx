@@ -16,6 +16,12 @@ export default async function Congelados() {
         style={{ backgroundImage: "url('/congelados2500x2500.webp')" }}
       >
         {!menu && <div className="loader m-auto mt-96"></div>}
+        <p className="md:text-4xl text-xl md:mb-2 mb-0">
+          Tomamos pedidos de viernes a miercoles hasta 18hs
+        </p>
+        <p className="md:text-4xl text-xl md:mb-8 mb-4 ">
+          Están listos para retirar el sábado de 12hs a 20hs
+        </p>
         {menu && (
           <StoreAddCartButton
             menu={menu}
@@ -23,7 +29,7 @@ export default async function Congelados() {
           />
         )}
       </div>
-      <Chatbot className={'bg-slate-800'} />
+      <Chatbot className={"bg-slate-800"} />
     </>
   );
 }
