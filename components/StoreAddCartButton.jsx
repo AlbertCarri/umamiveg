@@ -35,7 +35,7 @@ export const StoreAddCartButton = ({ menu, name }) => {
 
   return (
     <>
-    <Chatbot className={'bg-slate-800'} />
+      <Chatbot className={"bg-slate-800"} />
       {cart && (
         <>
           <button
@@ -59,18 +59,29 @@ export const StoreAddCartButton = ({ menu, name }) => {
           />
         </div>
       )}
+      <p className="md:text-4xl text-xl md:mb-2 mb-0">
+        Horarios : de Lunes a Sábados
+      </p>
+      <p className="md:text-3xl text-xl md:mb-8 mb-4 ">
+        de 12hs a 14hs y de 20hs a 23hs
+      </p>
       {menu.map((item, index) => (
-        <div key={`${item.id}-${index}`} className="flex flex-col">
-          <p className="md:text-6xl text-2xl md:mb-4 mb-0 md:mt-16 mt-8 underline underline-offset-8">
-            {name === "null" ? item.name.replace('menu-','').toUpperCase() : name.toUpperCase()}
+        <div key={`${item.id}-${index}`} className="flex flex-col w-full mb-16">
+          <p className="md:text-6xl text-2xl md:mb-4 mb-0 underline underline-offset-8">
+            {name === "null"
+              ? item.name.replace("menu-", "").toUpperCase()
+              : name.toUpperCase()}
           </p>
-          <div className="flex flex-wrap justify-around ">
-            {item.menu.map((category_menu) => (
-              <div key={category_menu.id}>
-                {category_menu.checked && (
-                  <div className="bg-slate-900 bg-opacity-50 p-4 m-auto mt-4 rounded-2xl md:w-96 w-11/12">
-                    <div className="flex flex-row justify-center">
-                      <div className="basis-40">
+          <div className="flex flex-wrap justify-center w-full gap-4">
+            {item.menu.map((category_menu) => {
+              if (category_menu.checked) {
+                return (
+                  <div
+                    key={category_menu.id}
+                    className="bg-slate-900 bg-opacity-50 p-4 m-auto mt-4 sm:w-96 w-full rounded-2xl"
+                  >
+                    <div className="flex flex-row">
+                      <div className="w-1/3">
                         <div className="rounded-lg mr-4 items-center w-28 h-28 overflow-hidden">
                           <img
                             className="w-full h-full object-cover"
@@ -79,11 +90,11 @@ export const StoreAddCartButton = ({ menu, name }) => {
                           />
                         </div>
                       </div>
-                      <div className="basis-96">
+                      <div className="w-2/3 p-2">
                         <p className="md:text-xl text-lg mb-2 underline underline-offset-4">
                           {category_menu.name}
                         </p>
-                        <p className="md:text-sm text-xs mb-1 h-16">
+                        <p className="md:text-sm text-xs text-left ml-4 mb-1 h-16">
                           {category_menu.description}
                         </p>
                         <p className="text-md mb-1">
@@ -115,9 +126,9 @@ export const StoreAddCartButton = ({ menu, name }) => {
                       Agregar al carrito
                     </button>
                   </div>
-                )}
-              </div>
-            ))}
+                );
+              }
+            })}
           </div>
         </div>
       ))}
