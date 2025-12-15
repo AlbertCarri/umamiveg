@@ -23,8 +23,8 @@ export default async function Menu() {
             <br />
             Te vendemos nuestro pan artesanal y nuestro seitán (ese que no se
             consigue en ningún lado) para que armes tus propios sándwiches en
-            casa. No seas vago 😄, cocinar un poco también es parte del
-            disfrute.
+            casa. Cocinar un poco también es parte del
+            disfrute 😅.
           </p>
           <ProductLink />
         </div>

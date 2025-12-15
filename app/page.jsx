@@ -13,24 +13,30 @@ export default function Home() {
           <p className="text-4xl text-gray-100">Comida a base de plantas</p>
         </div>
         <div className="absolute text-gray-100 left-4 top-1/4 text-left w-1/2">
-          <p className="lg:text-4xl text-xl text-gray-100">Quienes somos:</p>
+          <p className="lg:text-4xl text-xl text-gray-100">
+            Nuestra propuesta:
+          </p>
           <p className="lg:text-2xl text-md text-gray-100">
-            Somos un emprendimiento familiar con una dark-kitchen o cocina
-            fantasma.
+            Decidimos ajustar la propuesta para cuidar recursos y seguir
+            adelante.
             <br />
-            Te ofrecemos comida vegana hecha con ingredientes frescos y de alta
-            calidad. <br />
-            Cada plato está preparado con amor y cuidado, como si lo hicieras en
-            tu propia cocina.
+            Por eso ahora ofrecemos productos clave de nuestra cocina: pan,
+            seitán y opciones congeladas, listas para usar. <br />
+            La idea es simple: menos desperdicio, más flexibilidad y la misma
+            comida rica de siempre, pero disfrutada en tu casa.
           </p>
         </div>
         <div className="absolute text-gray-100 xl:left-3/4 left-1/2 top-1/3 text-left xl:w-1/4 w-1/2">
-          <p className="lg:text-4xl text-xl text-gray-100">Comodidad:</p>
+          <p className="lg:text-4xl text-xl text-gray-100">
+            Comer rico o darse un gusto:
+          </p>
           <p className="lg:text-2xl text-md text-gray-100">
-            ¿Estás ocupado y no tienes tiempo para cocinar? No te preocupes. Con
-            nuestra comida lista para comer y nuestros productos congelados,
-            puedes disfrutar de una comida nutritiva y deliciosa en cuestión de
-            minutos, sin sacrificar tu salud ni el sabor.
+            ¿Queres comer un sandwich con nuestro pan especial?, nuestro pan
+            brioche casero con semillitas. Tenes ganas de comer seitán y no
+            conseguis?, o panes de hamburguesas sin gusto raro?. Medallones de
+            legumbres casero, con verduras de verdad, no desidratadas. Tenemos
+            todo para vos, congelados y panaderia. Todo es por pedido anticipado
+            según nuestro cronograma de trabajo.
           </p>
         </div>
         <div className="absolute text-gray-100 left-4 top-1/2 text-left xl:w-1/4 w-1/2">
@@ -43,21 +49,19 @@ export default function Home() {
             platos de origen animal, nuestras recetas han sorprendido a muchos.
             Desde hamburguesas hasta recetas japonesas, quienes prueban nuestras
             opciones quedan encantados con la calidad, el sabor y el cuidado en
-            cada menú. ¿No nos crees?. Pide y descúbrelo por ti mismo.
+            cada producto. ¿No nos crees?. Pide y descúbrelo por ti mismo.
           </p>
         </div>
         <div className="absolute text-gray-100 xl:left-3/4 left-1/2 top-3/4 text-left xl:w-1/4 w-1/2">
           <p className="lg:text-4xl text-xl text-gray-100">Nuestros Precios:</p>
           <p className="lg:text-2xl text-md text-gray-100">
             Comer vegano no tiene por qué ser caro. Nuestros precios son tan
-            accesibles como los de cualquier otro menú, pero con el extra de que
+            accesibles como los de cualquier, pero con el extra de que
             aquí todo es casero y preparado con ingredientes frescos. Disfruta
-            de la comida sin preocuparte por el bolsillo, y además llévate el
-            plus de un menú lleno de dedicación y sabor.
+            de la comida sin preocuparte por el bolsillo.
           </p>
         </div>
         <div className="absolute flex flex-row ml-4 top-3/4 text-xl">
-          
           <a
             href="menu"
             target="blank"
