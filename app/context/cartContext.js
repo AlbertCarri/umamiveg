@@ -7,8 +7,8 @@ const CartContext = createContext();
 export function CartProvider({ children }) {
   const [items, setItems] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [toast, setToast] = useState({ show: false, message: "" });
 
-  // Cargar del localStorage al montar
   useEffect(() => {
     const saved = localStorage.getItem("cart");
     if (saved) {
@@ -21,27 +21,34 @@ export function CartProvider({ children }) {
     setIsLoaded(true);
   }, []);
 
-  // Guardar en localStorage cuando cambie
   useEffect(() => {
     if (isLoaded) {
       localStorage.setItem("cart", JSON.stringify(items));
     }
   }, [items, isLoaded]);
 
+  const showToast = (message) => {
+    setToast({ show: true, message });
+    setTimeout(() => setToast({ show: false, message: "" }), 2000);
+  };
+
   const addItem = (item) => {
     setItems((prev) => {
       const existing = prev.find((i) => i.id === item.id);
       if (existing) {
+        showToast("✳ Producto ya agregado")
         return prev.map((i) =>
           i.id === item.id ? { ...i, amount: i.amount + 1 } : i
         );
       }
+      showToast("✅ Producto Agregado")
       return [...prev, item];
     });
   };
 
   const removeItem = (id) => {
     setItems((prev) => prev.filter((i) => i.id !== id));
+    showToast("🚽 Producto eliminado");
   };
 
   const updateQuantity = (id, cantidad) => {
@@ -77,6 +84,11 @@ export function CartProvider({ children }) {
       }}
     >
       {children}
+      {toast.show && (
+        <div className="fixed top-24 right-5 bg-gray-800 text-white px-6 py-3 rounded-lg shadow-lg animate-slide-in">
+          {toast.message}
+        </div>
+      )}
     </CartContext.Provider>
   );
 }
