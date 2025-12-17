@@ -3,29 +3,18 @@
 import ShowCart from "@/components/showcart.jsx";
 import { useState } from "react";
 import { Chatbot } from "./Chatbot";
+import { useCart } from "@/app/context/cartContext";
 
 export const StoreAddCartButton = ({ menu, name }) => {
-  const [cart, setCart] = useState(false);
-  const [cartContent, setCartContent] = useState([]);
   const [showCartContent, setShowCartContent] = useState(false);
+  const { items, addItem } = useCart();
 
   const addCart = (cartAdd) => {
-    setCart(true);
-    setCartContent((prevCartContent) => {
-      const existe = prevCartContent.find((item) => item.id === cartAdd.id);
-      if (existe) {
-        return cartContent;
-      } else {
-        return [
-          ...prevCartContent,
-          {
-            id: cartAdd.id,
-            name: cartAdd.name,
-            price: cartAdd.price,
-            amount: 1,
-          },
-        ];
-      }
+    addItem({
+      id: cartAdd.id,
+      name: cartAdd.name,
+      price: cartAdd.price,
+      amount: 1,
     });
   };
 
@@ -36,27 +25,23 @@ export const StoreAddCartButton = ({ menu, name }) => {
   return (
     <>
       <Chatbot className={"bg-slate-800"} />
-      {cart && (
-        <>
-          <button
-            type="button"
-            className="fixed w-16 right-10"
-            onClick={showCartItems}
-          >
-            <img src="/cart.png" alt="Cart" className="backdrop-invert-0" />
-          </button>
-          <p className=" fixed bg-red-600 w-7 right-9 rounded-xl">
-            {cartContent.length}
-          </p>
-        </>
-      )}
+
+      <>
+        <button
+          type="button"
+          className="fixed w-16 right-10"
+          onClick={showCartItems}
+        >
+          <img src="/cart.png" alt="Cart" className="backdrop-invert-0" />
+        </button>
+        <p className=" fixed bg-red-600 w-7 right-9 rounded-xl">
+          {items?.length ?? 0}
+        </p>
+      </>
+
       {showCartContent && (
-        <div>
-          <ShowCart
-            cartContent={cartContent}
-            setCartContent={setCartContent}
-            setShowCartContent={setShowCartContent}
-          />
+        <div className="flex w-2/3 h-8 mx-auto justify-center">
+          <ShowCart setShowCartContent={setShowCartContent} />
         </div>
       )}
       {menu.map((item, index) => (

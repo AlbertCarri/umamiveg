@@ -16,7 +16,7 @@ export async function GET(req) {
     )
     .eq("resto_name", "UmamiVeg")
     .like("category.name", "menu-%");
-  console.log("Recibido de UMAMIVEG:::::", menu);
+
   if (error) {
     return new Response(JSON.stringify({ error: error.message }), {
       status: 500,

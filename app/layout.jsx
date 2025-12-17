@@ -3,6 +3,7 @@ import MenuBurger from "@/components/menuBurger";
 import Footer from "@/components/Footer";
 import MenuNoSmartPhone from "@/components/MenuNoSmartPhone";
 import { Analytics } from "@vercel/analytics/next";
+import { CartProvider } from "./context/cartContext";
 
 export const metadata = {
   title: "Umamiveg | Comida vegana casera en Campana",
@@ -24,29 +25,33 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
-        <nav
-          className="flex items-center justify-between p-0 bg-gray-800 text-gray-100"
-          aria-label="Navegación principal"
-        >
-          <a href="/" className="flex items-center">
-            <img
-              src="/Etiqueta-UMAMIVEG-Nuevo.png"
-              alt="Logo Umamiveg"
-              width={100}
-              className="md:mr-4 mr-2"
-            />
-            <span className="md:text-4xl text-3xl font-bold p-2">UmamiVeg</span>
-          </a>
-          <div className="hidden md:flex space-x-4 lg:text-xl text-md mr-4">
-            <MenuNoSmartPhone />
-          </div>
-          <div className="md:hidden">
-            <MenuBurger />
-          </div>
-        </nav>
-        {children}
-        <Footer />
-        <Analytics />
+        <CartProvider>
+          <nav
+            className="flex items-center justify-between p-0 bg-gray-800 text-gray-100"
+            aria-label="Navegación principal"
+          >
+            <a href="/" className="flex items-center">
+              <img
+                src="/Etiqueta-UMAMIVEG-Nuevo.png"
+                alt="Logo Umamiveg"
+                width={100}
+                className="md:mr-4 mr-2"
+              />
+              <span className="md:text-4xl text-3xl font-bold p-2">
+                UmamiVeg
+              </span>
+            </a>
+            <div className="hidden md:flex space-x-4 lg:text-xl text-md mr-4">
+              <MenuNoSmartPhone />
+            </div>
+            <div className="md:hidden">
+              <MenuBurger />
+            </div>
+          </nav>
+          {children}
+          <Footer />
+          <Analytics />
+        </CartProvider>
       </body>
     </html>
   );
