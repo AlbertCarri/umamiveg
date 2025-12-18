@@ -129,13 +129,14 @@ export default function Tienda() {
                         </div>
                         <div className="w-full border-zinc-500 border-t p-2 flex justify-center"></div>{" "}
                         {/* línea separadora*/}
-                        <button
+                        {/*<button
                           type="button"
                           onClick={() => addCart(category_menu)}
                           className="bg-green-900 w-3/4 mt-1 ml-auto mr-auto md:text-lg text-ms text-white rounded-xl p-1 hover:bg-orange-800"
                         >
                           Agregar al carrito
-                        </button>
+                        </button>*/}
+                        <p>Hacer pedidos por whatsapp</p>
                       </div>
                     )}
                   </div>
