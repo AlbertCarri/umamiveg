@@ -3,13 +3,13 @@
 import { useState, useEffect } from "react";
 import ShowCart from "@/components/showcart.jsx";
 import { Chatbot } from "@/components/Chatbot";
+import { useCart } from "../context/cartContext";
 
 export default function Tienda() {
   const [menu, setMenu] = useState([]);
   const [showMenu, setShowMenu] = useState(false);
-  const [cart, setCart] = useState(false);
-  const [cartContent, setCartContent] = useState([]);
   const [showCartContent, setShowCartContent] = useState(false);
+  const { items, addItem } = useCart();
 
   useEffect(() => {
     setShowMenu(false);
@@ -25,22 +25,11 @@ export default function Tienda() {
   }, []);
 
   const addCart = (cartAdd) => {
-    setCart(true);
-    setCartContent((prevCartContent) => {
-      const existe = prevCartContent.find((item) => item.id === cartAdd.id);
-      if (existe) {
-        return cartContent;
-      } else {
-        return [
-          ...prevCartContent,
-          {
-            id: cartAdd.id,
-            name: cartAdd.name,
-            price: cartAdd.price,
-            amount: 1,
-          },
-        ];
-      }
+    addItem({
+      id: cartAdd.id,
+      name: cartAdd.name,
+      price: cartAdd.price,
+      amount: 1,
     });
   };
 
@@ -55,37 +44,49 @@ export default function Tienda() {
         className="relative bg-cover md:bg-top bg-center md:h-[2000px] h-svh overflow-scroll scrollbar-hide text-center"
         style={{ backgroundImage: "url('/Tienda2500x2500.webp')" }}
       >
-        {cart && (
-          <>
-            <button
-              type="button"
-              className="fixed w-16 right-10"
-              onClick={showCartItems}
-            >
-              <img src="/cart.png" alt="Cart" className="backdrop-invert-0" />
-            </button>
-            <p className=" fixed bg-red-600 w-7 right-9 rounded-xl">
-              {cartContent.length}
-            </p>
-          </>
-        )}
+        <>
+          <button
+            type="button"
+            className="fixed w-16 right-10"
+            onClick={showCartItems}
+          >
+            <img src="/cart.png" alt="Cart" className="backdrop-invert-0" />
+          </button>
+          <p className=" fixed bg-red-600 w-7 right-9 rounded-xl">
+            {items?.length ?? 0}
+          </p>
+        </>
+
         {showCartContent && (
-          <div>
-            <ShowCart
-              cartContent={cartContent}
-              setCartContent={setCartContent}
-              setShowCartContent={setShowCartContent}
-            />
+          <div className="flex w-2/3 h-8 mx-auto justify-center">
+            <ShowCart setShowCartContent={setShowCartContent} />
           </div>
         )}
-
+        <div className="md:w-1/3 w-11/12 mx-auto mt-8 p-8 bg-slate-900 bg-opacity-50 border md:rounded-lg rounded-md">
+        <p className="lg:text-3xl text-md text-gray-100">
+          Tomamos pedidos hasta:
+          <br />
+          22 para navidad y 28 para fin de año
+          <br />
+          Lo vas a poder retirar el :
+          <br />
+          24 desde las 10hs hasta las 18hs
+          <br />
+          31 desde las 10hs hasta las 18hs
+          <br />
+          <br />
+          El pedido debe estar 50% señado
+        </p>
+        </div>
         {showMenu &&
           menu.map((item, index) => (
             <div key={`${item.id}-${index}`}>
               <p className="md:text-6xl text-2xl md:mb-4 mb-0 md:mt-4 mt-1 underline underline-offset-8">
-                {item.name.replace('tienda-','').toUpperCase()}
+                {item.name.replace("tienda-", "").toUpperCase()}
               </p>
-              <p className="md:text-4xl text-xl md:mb-4 mb-0 md:mt-4 mt-1">{'(Pedidos con seña del 50%)'}</p>
+              <p className="md:text-4xl text-xl md:mb-4 mb-0 md:mt-4 mt-1">
+                {"(Pedidos con seña del 50%)"}
+              </p>
               <div className=" flex flex-wrap justify-center mb-16">
                 {item.menu.map((category_menu) => (
                   <div key={category_menu.id}>
@@ -129,13 +130,13 @@ export default function Tienda() {
                         </div>
                         <div className="w-full border-zinc-500 border-t p-2 flex justify-center"></div>{" "}
                         {/* línea separadora*/}
-                        {/*<button
+                        <button
                           type="button"
                           onClick={() => addCart(category_menu)}
                           className="bg-green-900 w-3/4 mt-1 ml-auto mr-auto md:text-lg text-ms text-white rounded-xl p-1 hover:bg-orange-800"
                         >
                           Agregar al carrito
-                        </button>*/}
+                        </button>
                         <p>Hacer pedidos por whatsapp</p>
                       </div>
                     )}
