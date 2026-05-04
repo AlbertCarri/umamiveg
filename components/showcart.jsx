@@ -22,7 +22,7 @@ export default function ShowCart({ setShowCartContent }) {
     });
     text = text + ("*TOTAL*: $" + total);
     window.open(
-      `https://api.whatsapp.com/send?phone=543489538212&text=${text}`
+      `https://api.whatsapp.com/send?phone=543489693598&text=${text}`
     );
     clearCart();
   };

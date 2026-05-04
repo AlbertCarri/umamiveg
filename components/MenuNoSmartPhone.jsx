@@ -14,6 +14,9 @@ export default function MenuNoSmartPhone() {
       <Link href="/tienda" className="hover:text-lime-400">
         Tienda
       </Link>
+      <Link href="/recetas" className="hover:text-lime-400">
+        Recetas
+      </Link>
       <Link href="/reposteria" className="hover:text-lime-400">
         Repostería
       </Link>

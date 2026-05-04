@@ -5,7 +5,7 @@ export default function Contacto() {
     ev.preventDefault();
     const parametroCodificado = encodeURIComponent(ev.target[0].value);
     window.open(
-      `https://api.whatsapp.com/send?phone=543489538212&text=${parametroCodificado}`
+      `https://api.whatsapp.com/send?phone=543489693598&text=${parametroCodificado}`
     );
   };
 
