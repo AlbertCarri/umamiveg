@@ -13,9 +13,9 @@ export default async function Menu() {
         className="relative bg-cover md:bg-top bg-center md:h-[2000px] h-svh overflow-scroll scrollbar-hide text-center"
         style={{ backgroundImage: "url('/menu2500x2500.webp')" }}
       >
-        <div className="absolute w-full mt-16">
+        <div className="w-full mt-16">
           {/*<WhatsappOrPedidosya menu={menu} /> // Menú desabilitado por el momento*/}
-          <p className="md:w-2/3 w-11/12 mx-auto text-left lg:text-4xl text-xl text-gray-100">
+          <p className="md:w-2/3 w-11/12 mx-auto bg-gray-900/80 md:bg-transparent text-left lg:text-4xl text-xl text-gray-100 p-4 rounded-xl">
             Hoy no cocinamos todo… pero te damos lo mejor 😉.
             <br />
             La situación está rara y decidimos ser inteligentes: vos cocinás lo

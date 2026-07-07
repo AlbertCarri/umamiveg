@@ -15,7 +15,7 @@ export default function ProductLink() {
         href="/reposteria"
         className="ml-8 bg-cyan-600 p-4 hover:bg-cyan-800 rounded-xl shadow-inner shadow-black"
       >
-        REPOSTERÍA
+        PANADERÍA
       </Link>
     </div>
   );

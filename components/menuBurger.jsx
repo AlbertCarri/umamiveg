@@ -20,7 +20,7 @@ export default function MenuBurger() {
                             <a href="congelados" className="hover:text-yellow-300 mt-4">Congelados</a>
                             <a href="tienda" className="hover:text-yellow-300 mt-4">Tienda</a>
                             <a href="recetas" className="hover:text-yellow-300 mt-4">Recetas</a>
-                            <a href="reposteria" className="hover:text-yellow-300 mt-4">Repostería</a>
+                            <a href="reposteria" className="hover:text-yellow-300 mt-4">Panadería</a>
                             <a href="contacto" className="hover:text-yellow-300 mt-4 mb-5">Contacto</a>
                         </div>
                     </div>

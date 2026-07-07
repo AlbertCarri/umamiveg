@@ -2,6 +2,7 @@ import "./globals.css";
 import MenuBurger from "@/components/menuBurger";
 import Footer from "@/components/Footer";
 import MenuNoSmartPhone from "@/components/MenuNoSmartPhone";
+import Image from "next/image";
 import { Analytics } from "@vercel/analytics/next";
 import { CartProvider } from "./context/cartContext";
 
@@ -24,18 +25,20 @@ export default function RootLayout({ children }) {
           content="DKdWxgehorVyZzNTiSlzT7AHp7s2TRpln9yBrFYXGJQ"
         />
       </head>
-      <body>
-        <CartProvider>
+      <body className="flex flex-col min-h-screen">
+        <header className="sticky top-0 z-50 bg-gray-800/90 text-gray-100 backdrop-blur-sm">
           <nav
-            className="flex items-center justify-between p-0 bg-gray-800 text-gray-100"
+            className="flex items-center justify-between p-0 px-2 md:px-4"
             aria-label="Navegación principal"
           >
             <a href="/" className="flex items-center">
-              <img
+              <Image
                 src="/Etiqueta-UMAMIVEG-Nuevo.png"
                 alt="Logo Umamiveg"
                 width={100}
+                height={100}
                 className="md:mr-4 mr-2"
+                priority
               />
               <span className="md:text-4xl text-3xl font-bold p-2">
                 UmamiVeg
@@ -48,10 +51,12 @@ export default function RootLayout({ children }) {
               <MenuBurger />
             </div>
           </nav>
-          {children}
-          <Footer />
-          <Analytics />
-        </CartProvider>
+        </header>
+        <main>
+          <CartProvider>{children}</CartProvider>
+        </main>
+        <Footer />
+        <Analytics />
       </body>
     </html>
   );
