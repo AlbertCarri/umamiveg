@@ -23,13 +23,13 @@ export const StoreAddCartButton = ({ menu, name }) => {
   };
 
   return (
-    <>
+    <div className="mt-8">
       <Chatbot className={"bg-slate-800"} />
 
-      <>
+      <div className="absolute top-4">
         <button
           type="button"
-          className="fixed w-16 right-10"
+          className="fixed w-16 right-2"
           onClick={showCartItems}
         >
           <img src="/cart.png" alt="Cart" className="backdrop-invert-0" />
@@ -37,7 +37,7 @@ export const StoreAddCartButton = ({ menu, name }) => {
         <p className=" fixed bg-red-600 w-7 right-9 rounded-xl">
           {items?.length ?? 0}
         </p>
-      </>
+      </div>
 
       {showCartContent && (
         <div className="flex w-2/3 h-8 mx-auto justify-center">
@@ -46,7 +46,7 @@ export const StoreAddCartButton = ({ menu, name }) => {
       )}
       {menu.map((item, index) => (
         <div key={`${item.id}-${index}`} className="flex flex-col w-full mb-16">
-          <p className="md:text-6xl text-2xl md:mb-4 mb-0 underline underline-offset-8">
+          <p className="md:text-6xl text-2xl md:mb-4 mb-0">
             {name === "null"
               ? item.name.replace("menu-", "").toUpperCase()
               : name.toUpperCase()}
@@ -57,7 +57,7 @@ export const StoreAddCartButton = ({ menu, name }) => {
                 return (
                   <div
                     key={category_menu.id}
-                    className="bg-slate-900 bg-opacity-50 p-4 m-auto mt-4 sm:w-96 w-full rounded-2xl"
+                    className="bg-slate-900 bg-opacity-80 p-4 m-auto mt-4 sm:w-96 w-full rounded-2xl"
                   >
                     <div className="flex flex-row">
                       <div className="w-1/3">
@@ -76,7 +76,7 @@ export const StoreAddCartButton = ({ menu, name }) => {
                         <p className="md:text-sm text-xs text-left ml-4 mb-1 h-16">
                           {category_menu.description}
                         </p>
-                        <p className="text-md mb-1">
+                        <p className="text-md mb-0">
                           Precio ${category_menu.price}
                         </p>
                       </div>
@@ -89,7 +89,7 @@ export const StoreAddCartButton = ({ menu, name }) => {
                       {category_menu.alergens.map((alerg, index) => (
                         <p
                           key={`${category_menu.id}-${index}`}
-                          className="bg-emerald-700 text-xs line-clamp-1 md:line-clamp-none rounded-sm px-1 mr-2 mb-4"
+                          className="bg-emerald-700 text-xs line-clamp-1 md:line-clamp-none rounded-sm px-1 mr-2 mb-2"
                         >
                           {alerg}
                         </p>
@@ -100,7 +100,7 @@ export const StoreAddCartButton = ({ menu, name }) => {
                     <button
                       type="button"
                       onClick={() => addCart(category_menu)}
-                      className="bg-green-900 w-3/4 mt-1 ml-auto mr-auto md:text-lg text-ms text-white rounded-xl p-1 hover:bg-orange-800"
+                      className="bg-green-900 w-3/4 ml-auto mr-auto md:text-lg text-ms text-white rounded-xl p-1 hover:bg-orange-800"
                     >
                       Agregar al carrito
                     </button>
@@ -111,6 +111,6 @@ export const StoreAddCartButton = ({ menu, name }) => {
           </div>
         </div>
       ))}
-    </>
+    </div>
   );
 };

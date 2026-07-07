@@ -64,18 +64,8 @@ export default function Tienda() {
         )}
         <div className="md:w-1/3 w-11/12 mx-auto mt-8 p-8 bg-slate-900 bg-opacity-50 border md:rounded-lg rounded-md">
         <p className="lg:text-3xl text-md text-gray-100">
-          Tomamos pedidos hasta:
-          <br />
-          22 para navidad y 28 para fin de año
-          <br />
-          Lo vas a poder retirar el :
-          <br />
-          24 desde las 10hs hasta las 18hs
-          <br />
-          31 desde las 10hs hasta las 18hs
-          <br />
-          <br />
-          El pedido debe estar 50% señado
+          Por ahora no tenemos productos en nuestra tienda.
+          Solo estamos cocinando a pedido.
         </p>
         </div>
         {showMenu &&

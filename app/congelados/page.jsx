@@ -12,16 +12,18 @@ export default async function Congelados() {
   return (
     <>
       <div
-        className="bg-cover md:bg-top bg-center md:h-[2000px] scrollbar-hide h-svh overflow-scroll text-center"
+        className="relative bg-cover md:bg-top bg-center md:h-[2000px] scrollbar-hide h-svh overflow-scroll text-center"
         style={{ backgroundImage: "url('/congelados2500x2500.webp')" }}
       >
         {!menu && <div className="loader m-auto mt-96"></div>}
-        <p className="md:text-4xl text-xl md:mb-2 mb-0">
-          Tomamos pedidos de viernes a miercoles hasta 18hs
-        </p>
-        <p className="md:text-4xl text-xl md:mb-8 mb-4 ">
-          Están listos para retirar el sábado de 12hs a 20hs
-        </p>
+        <div className="bg-slate-800 mx-auto w-2/3 mt-4 p-4 rounded-xl">
+          <p className="md:text-4xl text-xl md:mb-2 mb-0">
+            Tomamos pedidos de viernes a miercoles hasta 18hs
+          </p>
+          <p className="md:text-4xl text-xl">
+            Están listos para retirar el sábado de 12hs a 20hs
+          </p>
+        </div>
         {menu && (
           <StoreAddCartButton
             menu={menu}

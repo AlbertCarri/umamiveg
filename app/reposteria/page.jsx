@@ -13,16 +13,18 @@ export default async function Reposteria() {
     <>
       <Chatbot className={"bg-slate-800"} />
       <div
-        className="relative bg-cover md:bg-top bg-center md:h-[2000px] h-svh overflow-scroll scrollbar-hide text-center"
-        style={{ backgroundImage: "url('/Reposteria2500x2500.webp')" }}
+        className="relative bg-[url('/Reposteria400x800.webp')] md:bg-[url('/Reposteria2500x2500.webp')] bg-cover md:bg-top bg-center md:h-[2000px] h-svh overflow-scroll scrollbar-hide text-center"
+        
       >
         {!menu && <div className="loader m-auto mt-96"></div>}
-        <p className="md:text-4xl text-xl md:mb-2 mb-0">
-          Tomamos pedidos de viernes a miercoles hasta 18hs
-        </p>
-        <p className="md:text-4xl text-xl md:mb-8 mb-4 ">
-          Están listos para retirar el sábado de 12hs a 20hs
-        </p>
+        <div className="bg-slate-800 mx-auto w-2/3 mt-4 p-4 rounded-xl">
+          <p className="md:text-4xl text-xl md:mb-2 mb-0">
+            Tomamos pedidos de viernes a miercoles hasta 18hs
+          </p>
+          <p className="md:text-4xl text-xl md:mb-8 mb-4 ">
+            Están listos para retirar el sábado de 12hs a 20hs
+          </p>
+        </div>
         {menu && (
           <StoreAddCartButton
             menu={menu}
