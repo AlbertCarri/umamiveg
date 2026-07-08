@@ -1,41 +1,21 @@
-import {
-  getAllRecipesMetadata,
-  getRecipeBySlug,
-  getAllSlugs,
-} from "@/lib/recipes";
-import MdxComponent from "@/components/MdxComponent";
+import { notFound } from "next/navigation";
+import { getAllSlugs } from "@/lib/recipes";
 
-/*export async function generateStaticParams() {
+export async function gerenateStaticParams() {
   const slugs = getAllSlugs();
   return slugs.map((slug) => ({ slug }));
 }
 
-export const dynamicParams = false;
-
-export async function generateMetadata({ params }) {
-  const allRecipes = await getAllRecipesMetadata();
-  const recipe = allRecipes.find((r) => r.slug === params.slug);
-
-  if (!recipe) {
-    return { title: "Receta no encontrada" };
-  }
-
-  return {
-    title: recipe.title,
-  };
-}*/
-
 export default async function Page({ params }) {
   const { slug } = await params;
-  const { metadata, default: Recipe } = await import(
-    `@/content/recipes/${slug}.mdx`
-  );
-
-  /*const components = {
-    h1: ({ children }) => (
-      <h1 className="text-blue-500 text-6xl">{children}</h1>
-    ),
-  };*/
+  let metadata, Recipe;
+  try {
+    ({ metadata, default: Recipe } = await import(
+      `@/content/recipes/${slug}.mdx`
+    ));
+  } catch {
+    notFound();
+  }
 
   return (
     <main>
