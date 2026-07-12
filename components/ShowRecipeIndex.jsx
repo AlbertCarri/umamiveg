@@ -16,7 +16,7 @@ export default function ShowRecipeIndex({ categories, allRecipes }) {
       <button
         type="button"
         onClick={() => setCategory("Todas")}
-        className="p-2 border mx-2 border-indigo-300 rounded-md"
+        className="p-2 border mx-2 bg-lime-700 border-indigo-300 rounded-md"
       >
         Todas
       </button>
@@ -25,16 +25,16 @@ export default function ShowRecipeIndex({ categories, allRecipes }) {
           key={c}
           type="button"
           onClick={() => setCategory(c)}
-          className="p-2 border mx-2 border-indigo-300 rounded-md"
+          className={`p-2 border mx-2 ${category===c? 'bg-orange-800' : 'bg-lime-700'} border-indigo-300 rounded-md`}
         >
           {c}
         </button>
       ))}
       {recipes ? (
-        <ul className="flex flex-wrap">
+        <ul className="flex flex-col md:flex-row">
           {recipes.map((recipe) => (
             <li key={recipe.title}>
-              <article className="w-52 bg-slate-700/80 p-2 rounded-lg mx-4 shadow-xl shadow-black">
+              <article className="w-52 bg-slate-700/80 p-2 rounded-lg mx-auto mt-4 md:mx-4 shadow-xl shadow-black">
                 <h2 className="text-md">{recipe.title}</h2>
                 <p className="text-xs">Porciones:{recipe.serves}</p>
                 <p className="text-xs">Tiempo de preparación: {recipe.time}</p>

@@ -37,16 +37,19 @@ export default function Home() {
               anticipado según nuestro cronograma de trabajo.
             </p>
             <p className="lg:text-4xl text-xl text-gray-100 mt-8">
-              Más para contarte:
+              Tenés un evento familiar?:
             </p>
             <p className="lg:text-2xl text-md text-gray-100">
-              ¡Nuestra comida a base de plantas no solo es saludable, sino
-              deliciosa! Con sabores que compiten ¡y muchas veces superan! a los
-              platos de origen animal, nuestras recetas han sorprendido a
-              muchos. Desde hamburguesas hasta recetas japonesas, quienes
-              prueban nuestras opciones quedan encantados con la calidad, el
-              sabor y el cuidado en cada producto. ¿No nos crees?. Pide y
-              descúbrelo por ti mismo.
+              No dejes a tus invitados veganos o vegetarianos sin comer, eso es
+              muy feo😩. Avisanos con tiempo y te enviamos nuestra propuesta,
+              vas a quedar muy bien😉.
+              <br />
+              Dulce: Hacemos tortas de cumpleaños y mesas dulces.
+              <br />
+              Salado: empanaditas, chips, minitartas, sandwichs, etc.
+              <br />
+              Tenemos todo para ofrecerte para tu reunión familiar o catering,
+              escribinos a nuestro whatsapp en "Contacto".
             </p>
             <div className="w-1/3 mx-auto text-xl mt-8">
               <a
@@ -87,22 +90,28 @@ export default function Home() {
               Cada plato está preparado con amor y cuidado, como si lo hicieras
               en tu propia cocina.
             </p>
-            <p className="text-md text-gray-100 mt-4">Comodidad:</p>
+            <p className="text-xl text-gray-100 mt-4">Comodidad:</p>
             <p className="text-xs text-gray-100">
               ¿Estás ocupado y no tienes tiempo para cocinar? No te preocupes.
               Con nuestra comida lista para comer y nuestros productos
               congelados, puedes disfrutar de una comida nutritiva y deliciosa
               en cuestión de minutos, sin sacrificar tu salud ni el sabor.
             </p>
-            <p className="text-md text-gray-100 mt-4">Más para contarte:</p>
-            <p className="text-xs text-gray-100">
-              ¡Nuestra comida a base de plantas no solo es saludable, sino
-              deliciosa! Con sabores que compiten ¡y muchas veces superan! a los
-              platos de origen animal, nuestras recetas han sorprendido a
-              muchos. Desde hamburguesas hasta recetas japonesas, quienes
-              prueban nuestras opciones quedan encantados con la calidad, el
-              sabor y el cuidado en cada menú. ¿No nos crees?. Pide y descúbrelo
-              por ti mismo.
+            <p className="text-xl text-gray-100 mt-4">
+              Tenés un evento familiar?
+            </p>
+
+            <p className="text-left text-xs text-gray-100 mt-2 mb-4">
+              No dejes a tus invitados veganos o vegetarianos sin comer, eso es
+              muy feo😩. Avisanos con tiempo y te enviamos nuestra propuesta,
+              vas a quedar muy bien😉.
+              <br />
+              Dulce: Hacemos tortas de cumpleaños y mesas dulces.
+              <br />
+              Salado: empanaditas, chips, minitartas, sandwichs, etc.
+              <br />
+              Tenemos todo para ofrecerte para tu reunión familiar o catering,
+              escribinos a nuestro whatsapp en "Contacto".
             </p>
           </div>
 

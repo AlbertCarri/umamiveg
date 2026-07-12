@@ -19,7 +19,7 @@ export default async function Page({ params }) {
   }
 
   return (
-    <article className="flex flex-col justify-center items-center w-2/3 mx-auto mt-4">
+    <article className="flex flex-col justify-center items-center w-2/3 mx-auto mt-4 mb-8">
       <header className="text-center">
         <h1 className="text-5xl">{metadata.title}</h1>
         <p>Publicado el {metadata.date}</p>
