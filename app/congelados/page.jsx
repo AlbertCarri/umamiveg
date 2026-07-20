@@ -23,6 +23,9 @@ export default async function Congelados() {
           <p className="md:text-4xl text-xl">
             Están listos para retirar el sábado de 12hs a 20hs
           </p>
+          <p className="md:text-4xl text-xl mt-2">
+            Compra mínima $25000😏
+          </p>
         </div>
         {menu && (
           <StoreAddCartButton

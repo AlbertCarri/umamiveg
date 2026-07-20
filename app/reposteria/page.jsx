@@ -21,8 +21,11 @@ export default async function Reposteria() {
           <p className="md:text-4xl text-xl md:mb-2 mb-0">
             Tomamos pedidos de viernes a miercoles hasta 18hs
           </p>
-          <p className="md:text-4xl text-xl md:mb-8 mb-4 ">
+          <p className="md:text-4xl text-xl md:mb-4 mb-2 ">
             Están listos para retirar el sábado de 12hs a 20hs
+          </p>
+          <p className="md:text-4xl text-xl">
+            Compra mínima $25000😏
           </p>
         </div>
         {menu && (
